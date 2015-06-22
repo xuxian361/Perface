@@ -2,15 +2,95 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".LoginActivity">
+    tools:context=".LoginActivity"
+    android:background="@color/white_bg">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:id="@+id/relative_topbar">
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/topbar_back" />
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:padding="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/register"
+            style="@style/txt_font_black_16" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relative_topbar"
+        android:layout_above="@+id/btn_login">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:id="@+id/edt_account"
+                android:background="@drawable/shape_corner_gray"
+                android:hint="@string/email_phone"
+                android:textColorHint="@color/black2"
+                android:textSize="14sp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:singleLine="true"
+                android:phoneNumber="true" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:id="@+id/edt_password"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/shape_corner_gray"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:hint="@string/password"
+                android:textSize="14sp"
+                android:password="true"
+                android:singleLine="true" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_problem"
+                android:id="@+id/btn_login_fail"
+                android:layout_gravity="right"
+                android:background="@null"
+                style="@style/txt_font_black2_14" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="@string/login"
+        android:id="@+id/btn_login"
+        android:background="@drawable/shape_corner_red"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:textSize="22sp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white_bg"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp" />
 
 </RelativeLayout>
