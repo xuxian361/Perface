@@ -6,5 +6,10 @@
     <string name="email_phone">邮箱/手机号</string>
     <string name="password">密码</string>
     <string name="login_problem"><u>登陆有问题?</u></string>
+    <string name="email">邮箱</string>
+    <string name="phone">手机号</string>
+    <string name="validation">验证码</string>
+    <string name="confirm_password">确认密码</string>
+    <string name="nickname">昵称</string>
 
 </resources>

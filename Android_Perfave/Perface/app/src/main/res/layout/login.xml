@@ -2,95 +2,100 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
-    android:background="@color/white_bg">
+    android:background="@color/white_bg"
+    tools:context=".LoginActivity">
 
     <RelativeLayout
+        android:id="@+id/relative_topbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/relative_topbar">
+        android:layout_height="wrap_content">
 
-        <include
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            layout="@layout/topbar_back" />
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:background="@null"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/btn_back" />
 
         <Button
             android:id="@+id/btnRegister"
+            style="@style/txt_font_black_16"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:background="@null"
-            android:padding="10dp"
             android:layout_alignParentRight="true"
             android:layout_marginTop="5dp"
-            android:text="@string/register"
-            style="@style/txt_font_black_16" />
+            android:background="@null"
+            android:padding="10dp"
+            android:text="@string/register" />
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/relative_topbar"
-        android:layout_above="@+id/btn_login">
+        android:layout_above="@+id/btn_login"
+        android:layout_below="@+id/relative_topbar">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
+            android:orientation="vertical"
             android:paddingLeft="16dp"
             android:paddingRight="16dp">
 
             <EditText
+                android:id="@+id/edt_account"
                 android:layout_width="match_parent"
                 android:layout_height="46dp"
-                android:id="@+id/edt_account"
                 android:background="@drawable/shape_corner_gray"
                 android:hint="@string/email_phone"
-                android:textColorHint="@color/black2"
-                android:textSize="14sp"
                 android:paddingLeft="8dp"
                 android:paddingRight="8dp"
+                android:phoneNumber="true"
                 android:singleLine="true"
-                android:phoneNumber="true" />
+                android:textColorHint="@color/black2"
+                android:textSize="14sp" />
 
             <EditText
+                android:id="@+id/edt_password"
                 android:layout_width="match_parent"
                 android:layout_height="46dp"
-                android:id="@+id/edt_password"
                 android:layout_marginTop="12dp"
                 android:background="@drawable/shape_corner_gray"
+                android:hint="@string/password"
                 android:paddingLeft="8dp"
                 android:paddingRight="8dp"
-                android:hint="@string/password"
-                android:textSize="14sp"
                 android:password="true"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:textSize="14sp" />
 
             <Button
+                android:id="@+id/btn_login_fail"
+                style="@style/txt_font_black2_14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/login_problem"
-                android:id="@+id/btn_login_fail"
                 android:layout_gravity="right"
                 android:background="@null"
-                style="@style/txt_font_black2_14" />
+                android:text="@string/login_problem" />
         </LinearLayout>
     </RelativeLayout>
 
     <Button
+        android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:text="@string/login"
-        android:id="@+id/btn_login"
-        android:background="@drawable/shape_corner_red"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
-        android:textSize="22sp"
-        android:layout_marginTop="5dp"
-        android:textColor="@color/white_bg"
         android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp" />
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shape_corner_red"
+        android:text="@string/login"
+        android:textColor="@color/white_bg"
+        android:textSize="22sp" />
 
 </RelativeLayout>

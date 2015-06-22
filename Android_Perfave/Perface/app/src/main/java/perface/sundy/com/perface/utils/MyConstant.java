@@ -15,5 +15,6 @@ public class MyConstant {
     private static final String HTTP_UAT = "http://113.105.8.170:8080/weixiu";
     public static final String HTTP_BASE = HTTP_UAT;
 
+    public static final boolean IsDebug = true;
 
 }

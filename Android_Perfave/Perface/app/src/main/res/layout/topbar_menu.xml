@@ -4,7 +4,7 @@
     android:layout_height="wrap_content">
 
     <ImageButton
-        android:id="@+id/btnBack"
+        android:id="@+id/btnMenu"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="5dp"
@@ -12,7 +12,7 @@
         android:onClick="onClick"
         android:padding="10dp"
         android:scaleType="fitCenter"
-        android:src="@mipmap/btn_back" />
+        android:src="@mipmap/btn_menu2" />
 
     <LinearLayout
         android:id="@+id/linear_title"

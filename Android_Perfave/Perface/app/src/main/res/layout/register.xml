@@ -1,0 +1,187 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_bg"
+    tools:context=".RegisterActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/relative_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:background="@null"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/btn_back" />
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_register"
+        android:layout_below="@+id/relative_topbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/edt_email"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:background="@drawable/shape_corner_gray"
+                android:hint="@string/email"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:phoneNumber="true"
+                android:singleLine="true"
+                android:textColorHint="@color/black2"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edt_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/btn_validate"
+                    android:background="@drawable/shape_corner_gray"
+                    android:hint="@string/phone"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:phoneNumber="true"
+                    android:singleLine="true"
+                    android:textColorHint="@color/black2"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/btn_validate"
+                    android:layout_width="120dp"
+                    android:layout_height="46dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/red2"
+                    android:text="发送验证码"
+                    android:textColor="@color/white_bg"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/edt_validation"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/shape_corner_gray"
+                android:hint="@string/validation"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:phoneNumber="true"
+                android:singleLine="true"
+                android:textColorHint="@color/black2"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edt_password"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/shape_corner_gray"
+                android:hint="@string/password"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:password="true"
+                android:phoneNumber="false"
+                android:singleLine="true"
+                android:textColorHint="@color/black2"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edt_password2"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/shape_corner_gray"
+                android:hint="@string/confirm_password"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:password="true"
+                android:phoneNumber="false"
+                android:singleLine="true"
+                android:textColorHint="@color/black2"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edt_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/shape_corner_gray"
+                android:hint="@string/nickname"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:phoneNumber="true"
+                android:singleLine="true"
+                android:textColorHint="@color/black2"
+                android:textSize="14sp" />
+
+
+            <RelativeLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp">
+
+                <perface.sundy.com.perface.utils.custom_view.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/user_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/profile_img"
+                    app:border_color="@color/green_bg"
+                    app:border_width="1dp" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/settings_icon_edit" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shape_corner_red"
+        android:text="@string/register"
+        android:textColor="@color/white_bg"
+        android:textSize="22sp" />
+
+</RelativeLayout>
