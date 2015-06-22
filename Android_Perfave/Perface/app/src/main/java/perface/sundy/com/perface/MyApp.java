@@ -1,6 +1,5 @@
 package perface.sundy.com.perface;
 
-import android.app.Activity;
 import android.app.Application;
 import android.text.TextUtils;
 
@@ -8,9 +7,6 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.Volley;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import perface.sundy.com.perface.utils.LruBitmapCache;
 
@@ -25,8 +21,6 @@ public class MyApp extends Application {
     private ImageLoader imageLoader;
 
     private static MyApp myApp;
-
-    public static List<Activity> activityList = new ArrayList<>();
 
     @Override
     public void onCreate() {
@@ -76,23 +70,5 @@ public class MyApp extends Application {
             requestQueue.cancelAll(tag);
         }
     }
-
-    /* Handle Activity start */
-    public static void addActivity(Activity activity) {
-        if (activity != null) {
-            activityList.add(activity);
-        }
-    }
-
-    public static void finishAllActivity() {
-        if (activityList != null && activityList.size() != 0) {
-            for (Activity activity : activityList) {
-                activity.finish();
-            }
-            activityList.clear();
-            System.exit(0);
-        }
-    }
-    /* Handle Activity end */
 
 }

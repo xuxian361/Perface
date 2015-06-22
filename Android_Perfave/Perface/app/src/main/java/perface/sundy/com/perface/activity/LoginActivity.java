@@ -2,8 +2,8 @@ package perface.sundy.com.perface.activity;
 
 import android.os.Bundle;
 
-import perface.sundy.com.perface.MyApp;
 import perface.sundy.com.perface.R;
+import perface.sundy.com.perface.utils.ActivityController;
 
 /**
  * Created by sundy on 15/6/21.
@@ -15,7 +15,7 @@ public class LoginActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
-        MyApp.addActivity(this);
+        ActivityController.addActivity(this);
 
     }
 
@@ -23,6 +23,7 @@ public class LoginActivity extends BaseActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        ActivityController.removeActivity(this);
     }
 
 }
