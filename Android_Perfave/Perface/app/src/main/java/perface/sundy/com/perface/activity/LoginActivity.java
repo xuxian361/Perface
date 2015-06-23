@@ -24,6 +24,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         aq = new AQuery(this);
 
         aq.id(R.id.btnRegister).clicked(this);
+        aq.id(R.id.btn_login).clicked(this);
 
     }
 
@@ -40,7 +41,15 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
             case R.id.btnRegister:
                 goRegister();
                 break;
+            case R.id.btn_login:
+                goMain();
+                break;
         }
+    }
+
+    private void goMain() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 
     private void goRegister() {

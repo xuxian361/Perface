@@ -24,4 +24,5 @@ dependencies {
     compile 'com.android.support:support-v4:22.2.0'
     compile files('libs/volley.jar')
     compile files('libs/android-query-full.0.26.8.jar')
+    compile project(':libraries:SlidingMenu')
 }

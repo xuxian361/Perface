@@ -11,5 +11,8 @@
     <string name="validation">验证码</string>
     <string name="confirm_password">确认密码</string>
     <string name="nickname">昵称</string>
+    <string name="home">首页</string>
+    <string name="my_photo">我的写真</string>
+    <string name="my_bookmark">我的收藏</string>
 
 </resources>

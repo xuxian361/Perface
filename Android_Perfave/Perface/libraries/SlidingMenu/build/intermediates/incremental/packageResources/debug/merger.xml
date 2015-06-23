@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/Users/sundy/Documents/Projects/Android_Perface_Git/Perface/Android_Perfave/Perface/libraries/SlidingMenu/res"><file name="ic_launcher" path="/Users/sundy/Documents/Projects/Android_Perface_Git/Perface/Android_Perfave/Perface/libraries/SlidingMenu/res/drawable-hdpi/ic_launcher.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_launcher" path="/Users/sundy/Documents/Projects/Android_Perface_Git/Perface/Android_Perfave/Perface/libraries/SlidingMenu/res/drawable-ldpi/ic_launcher.png" qualifiers="ldpi-v4" type="drawable"/><file name="ic_launcher" path="/Users/sundy/Documents/Projects/Android_Perface_Git/Perface/Android_Perfave/Perface/libraries/SlidingMenu/res/drawable-mdpi/ic_launcher.png" qualifiers="mdpi-v4" type="drawable"/><file name="ic_launcher" path="/Users/sundy/Documents/Projects/Android_Perface_Git/Perface/Android_Perfave/Perface/libraries/SlidingMenu/res/drawable-xhdpi/ic_launcher.png" qualifiers="xhdpi-v4" type="drawable"/><file name="main" path="/Users/sundy/Documents/Projects/Android_Perface_Git/Perface/Android_Perfave/Perface/libraries/SlidingMenu/res/layout/main.xml" qualifiers="" type="layout"/><file name="slidingmenumain" path="/Users/sundy/Documents/Projects/Android_Perface_Git/Perface/Android_Perfave/Perface/libraries/SlidingMenu/res/layout/slidingmenumain.xml" qualifiers="" type="layout"/><file path="/Users/sundy/Documents/Projects/Android_Perface_Git/Perface/Android_Perfave/Perface/libraries/SlidingMenu/res/values/attrs.xml" qualifiers=""><declare-styleable name="SlidingMenu">
+        <attr name="mode">
+            <enum name="left" value="0"/>
+            <enum name="right" value="1"/>
+        </attr>
+        <attr format="reference" name="viewAbove"/>
+        <attr format="reference" name="viewBehind"/>
+        <attr format="dimension" name="behindOffset"/>
+        <attr format="dimension" name="behindWidth"/>
+        <attr format="float" name="behindScrollScale"/>
+        <attr name="touchModeAbove">
+            <enum name="margin" value="0"/>
+            <enum name="fullscreen" value="1"/>
+        </attr>
+        <attr name="touchModeBehind">
+            <enum name="margin" value="0"/>
+            <enum name="fullscreen" value="1"/>
+        </attr>
+        <attr format="reference" name="shadowDrawable"/>
+        <attr format="dimension" name="shadowWidth"/>
+        <attr format="boolean" name="fadeEnabled"/>
+        <attr format="float" name="fadeDegree"/>
+        <attr format="boolean" name="selectorEnabled"/>
+        <attr format="reference" name="selectorDrawable"/>
+    </declare-styleable></file><file path="/Users/sundy/Documents/Projects/Android_Perface_Git/Perface/Android_Perfave/Perface/libraries/SlidingMenu/res/values/ids.xml" qualifiers=""><item name="selected_view" type="id"/></file><file path="/Users/sundy/Documents/Projects/Android_Perface_Git/Perface/Android_Perfave/Perface/libraries/SlidingMenu/res/values/strings.xml" qualifiers=""><string name="app_name">ACTIVITY_ENTRY_NAME</string></file></source><source path="/Users/sundy/Documents/Projects/Android_Perface_Git/Perface/Android_Perfave/Perface/libraries/SlidingMenu/build/generated/res/rs/debug"/><source path="/Users/sundy/Documents/Projects/Android_Perface_Git/Perface/Android_Perfave/Perface/libraries/SlidingMenu/build/generated/res/generated/debug"/></dataSet><dataSet config="debug"><source path="/Users/sundy/Documents/Projects/Android_Perface_Git/Perface/Android_Perfave/Perface/libraries/SlidingMenu/build-types/debug/res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="SlidingMenu"><attr name="mode"><enum name="left" value="0"/><enum name="right" value="1"/></attr><attr format="reference" name="viewAbove"/><attr format="reference" name="viewBehind"/><attr format="dimension" name="behindOffset"/><attr format="dimension" name="behindWidth"/><attr format="float" name="behindScrollScale"/><attr name="touchModeAbove"><enum name="margin" value="0"/><enum name="fullscreen" value="1"/></attr><attr name="touchModeBehind"><enum name="margin" value="0"/><enum name="fullscreen" value="1"/></attr><attr format="reference" name="shadowDrawable"/><attr format="dimension" name="shadowWidth"/><attr format="boolean" name="fadeEnabled"/><attr format="float" name="fadeDegree"/><attr format="boolean" name="selectorEnabled"/><attr format="reference" name="selectorDrawable"/></declare-styleable></configuration></mergedItems></merger>
