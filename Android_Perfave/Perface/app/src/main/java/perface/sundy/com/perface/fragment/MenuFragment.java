@@ -26,7 +26,7 @@ public class MenuFragment extends Fragment implements View.OnClickListener {
     public OnListListener MenuCallBack;
     protected FragmentActivity context;
     public int curRadioId = R.id.btn_home;
-    private BaseFragment home, my_photo, my_bookmark;
+    private BaseFragment home, my_photo, my_bookmark, userinfo;
 
     public MenuFragment() {
     }
@@ -73,6 +73,7 @@ public class MenuFragment extends Fragment implements View.OnClickListener {
             aq.id(R.id.btn_home).clicked(onClickListener);
             aq.id(R.id.btn_my_photo).clicked(onClickListener);
             aq.id(R.id.btn_my_bookmark).clicked(onClickListener);
+            aq.id(R.id.user_pic).clicked(onClickListener);
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -110,6 +111,12 @@ public class MenuFragment extends Fragment implements View.OnClickListener {
                 if (my_bookmark == null)
                     my_bookmark = new MyBookmarkFragment(MenuFragment.this);
                 fragment = my_bookmark;
+                curRadioId = index;
+                break;
+            case R.id.user_pic:
+                if (userinfo == null)
+                    userinfo = new UserInfo(MenuFragment.this);
+                fragment = userinfo;
                 curRadioId = index;
                 break;
         }

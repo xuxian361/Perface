@@ -34,7 +34,7 @@ public class MyPhotoFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         this.inflater = inflater;
-        v = inflater.inflate(R.layout.main, container, false);
+        v = inflater.inflate(R.layout.my_photo, container, false);
         aq = new AQuery(v);
 
         init();

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relative_top_bg"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/green_bg">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:background="@mipmap/banner_bg" />
+
+        <include
+            layout="@layout/topbar_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <RelativeLayout
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="12dp">
+
+                    <perface.sundy.com.perface.utils.custom_view.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/user_pic"
+                        android:layout_width="76dp"
+                        android:layout_height="76dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@mipmap/profile_img"
+                        app:border_color="@color/green_bg"
+                        app:border_width="1dp" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/settings_icon_edit" />
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/edt_nickname"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:padding="2dp"
+                    android:text="Sundy Xu"
+                    android:textSize="14sp"
+                    android:typeface="monospace" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/txt_font_black_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/my_account" />
+
+                    <TextView
+                        android:id="@+id/txt_email"
+                        style="@style/txt_font_black2_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="308379285@qq.com" />
+
+                    <TextView
+                        android:id="@+id/txt_phone"
+                        style="@style/txt_font_black2_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="15088086607" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/img_arrow"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:src="@mipmap/arrow_down_black" />
+
+                        <TextView
+                            style="@style/txt_font_black_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/img_arrow"
+                            android:text="@string/update_password" />
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/btn_confirm"
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@null"
+                        android:scaleType="fitEnd"
+                        android:src="@mipmap/correct_black" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/edt_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/shape_corner_gray"
+                        android:hint="@string/password"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:password="true"
+                        android:phoneNumber="false"
+                        android:singleLine="true"
+                        android:textColorHint="@color/black2"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/edt_password2"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/shape_corner_gray"
+                        android:hint="@string/confirm_password"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:password="true"
+                        android:phoneNumber="false"
+                        android:singleLine="true"
+                        android:textColorHint="@color/black2"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btn_exit"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/shape_corner_red"
+            android:text="@string/logout"
+            android:textColor="@color/white_bg"
+            android:textSize="22sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

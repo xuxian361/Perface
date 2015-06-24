@@ -96,5 +96,6 @@
     <orderEntry type="library" exported="" name="appcompat-v7-22.2.0" level="project" />
     <orderEntry type="library" exported="" name="volley" level="project" />
     <orderEntry type="module" module-name="SlidingMenu" exported="" />
+    <orderEntry type="module" module-name="HorizontalVariableListView" exported="" />
   </component>
 </module>

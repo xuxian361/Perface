@@ -51,8 +51,8 @@ public class MainActivity extends SlidingFragmentActivity implements BaseFragmen
         sm.setBehindOffset(width);
         sm.setTouchModeAbove(SlidingMenu.TOUCHMODE_NONE);
         sm.setFadeDegree(0.5f);
-        sm.setShadowWidth(50);
-        sm.setShadowDrawable(R.drawable.shadow);
+//        sm.setShadowWidth(50);
+//        sm.setShadowDrawable(R.drawable.shadow);
     }
 
     private void addMenuFragment() {

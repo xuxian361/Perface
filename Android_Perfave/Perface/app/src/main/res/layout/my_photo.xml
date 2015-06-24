@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relative_top_bg"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/green_bg">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:background="@mipmap/banner_bg" />
+
+        <include
+            layout="@layout/topbar_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                style="@style/txt_font_black2_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/people_can_see"
+                android:id="@+id/txt_1"
+                android:visibility="gone" />
+
+            <it.sephiroth.android.library.widget.HListView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/lv_1"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="5dp"
+                android:divider="@null"
+                android:fadingEdge="none"
+                android:scrollbars="none"
+                app:dividerWidth="14dp"
+                android:visibility="gone" />
+
+            <TextView
+                style="@style/txt_font_black2_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/people_cannot_see"
+                android:id="@+id/txt_2"
+                android:visibility="gone" />
+
+            <it.sephiroth.android.library.widget.HListView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/lv_2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="5dp"
+                android:divider="@null"
+                android:fadingEdge="none"
+                android:scrollbars="none"
+                app:dividerWidth="14dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

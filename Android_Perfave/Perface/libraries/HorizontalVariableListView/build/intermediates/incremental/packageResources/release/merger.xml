@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/Users/sundy/Documents/Projects/Android_Perface_Git/Perface/Android_Perfave/Perface/libraries/HorizontalVariableListView/res"><file name="hlv_overscroll_edge" path="/Users/sundy/Documents/Projects/Android_Perface_Git/Perface/Android_Perfave/Perface/libraries/HorizontalVariableListView/res/drawable-hdpi/hlv_overscroll_edge.png" qualifiers="hdpi-v4" type="drawable"/><file name="hlv_overscroll_glow" path="/Users/sundy/Documents/Projects/Android_Perface_Git/Perface/Android_Perfave/Perface/libraries/HorizontalVariableListView/res/drawable-hdpi/hlv_overscroll_glow.png" qualifiers="hdpi-v4" type="drawable"/><file name="hlv_overscroll_edge" path="/Users/sundy/Documents/Projects/Android_Perface_Git/Perface/Android_Perfave/Perface/libraries/HorizontalVariableListView/res/drawable-ldpi/hlv_overscroll_edge.png" qualifiers="ldpi-v4" type="drawable"/><file name="hlv_overscroll_glow" path="/Users/sundy/Documents/Projects/Android_Perface_Git/Perface/Android_Perfave/Perface/libraries/HorizontalVariableListView/res/drawable-ldpi/hlv_overscroll_glow.png" qualifiers="ldpi-v4" type="drawable"/><file name="hlv_overscroll_edge" path="/Users/sundy/Documents/Projects/Android_Perface_Git/Perface/Android_Perfave/Perface/libraries/HorizontalVariableListView/res/drawable-mdpi/hlv_overscroll_edge.png" qualifiers="mdpi-v4" type="drawable"/><file name="hlv_overscroll_glow" path="/Users/sundy/Documents/Projects/Android_Perface_Git/Perface/Android_Perfave/Perface/libraries/HorizontalVariableListView/res/drawable-mdpi/hlv_overscroll_glow.png" qualifiers="mdpi-v4" type="drawable"/><file name="hlv_overscroll_edge" path="/Users/sundy/Documents/Projects/Android_Perface_Git/Perface/Android_Perfave/Perface/libraries/HorizontalVariableListView/res/drawable-xhdpi/hlv_overscroll_edge.png" qualifiers="xhdpi-v4" type="drawable"/><file name="hlv_overscroll_glow" path="/Users/sundy/Documents/Projects/Android_Perface_Git/Perface/Android_Perfave/Perface/libraries/HorizontalVariableListView/res/drawable-xhdpi/hlv_overscroll_glow.png" qualifiers="xhdpi-v4" type="drawable"/><file path="/Users/sundy/Documents/Projects/Android_Perface_Git/Perface/Android_Perfave/Perface/libraries/HorizontalVariableListView/res/values/hlv_attrs.xml" qualifiers=""><attr format="reference" name="sephiroth_listViewStyle"/><declare-styleable name="HListView">
+        <attr name="android:entries"/>
+        <attr name="android:divider"/>
+        <attr format="dimension" name="dividerWidth"/>
+        <attr format="boolean" name="headerDividersEnabled"/>
+        <attr format="boolean" name="footerDividersEnabled"/>
+        <attr format="reference|color" name="overScrollHeader"/>
+        <attr format="reference|color" name="overScrollFooter"/>
+        
+        <!-- 
+        When "wrap_content" is used as value of the layout_height property.
+        Pass the position, inside the adapter, of the view being used to measure the view
+        or '-1' to use the default behavior ( default is -1 )
+        -->
+        <attr format="integer" name="measureWithChild"/>        
+    </declare-styleable><attr format="reference" name="sephiroth_absHListViewStyle"/><attr format="dimension" name="sephiroth_listPreferredItemWidth"/><attr format="reference" name="entries"/><declare-styleable name="AbsHListView">
+        <attr name="android:listSelector"/>
+        <attr name="android:smoothScrollbar"/>
+        <attr name="android:drawSelectorOnTop"/>
+        <attr name="android:cacheColorHint"/>
+        <attr name="android:scrollingCache"/>
+        <attr name="android:choiceMode"/>
+        
+        <attr format="boolean" name="stackFromRight"/>
+        <attr name="transcriptMode">
+            <enum name="disabled" value="0"/>
+            <enum name="normal" value="1"/>
+            <enum name="alwaysScroll" value="2"/>
+        </attr>
+        
+    </declare-styleable></file></source><source path="/Users/sundy/Documents/Projects/Android_Perface_Git/Perface/Android_Perfave/Perface/libraries/HorizontalVariableListView/build/generated/res/rs/release"/><source path="/Users/sundy/Documents/Projects/Android_Perface_Git/Perface/Android_Perfave/Perface/libraries/HorizontalVariableListView/build/generated/res/generated/release"/></dataSet><dataSet config="release"><source path="/Users/sundy/Documents/Projects/Android_Perface_Git/Perface/Android_Perfave/Perface/libraries/HorizontalVariableListView/src/release/res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="AbsHListView"><attr name="android:listSelector"/><attr name="android:smoothScrollbar"/><attr name="android:drawSelectorOnTop"/><attr name="android:cacheColorHint"/><attr name="android:scrollingCache"/><attr name="android:choiceMode"/><attr format="boolean" name="stackFromRight"/><attr name="transcriptMode"><enum name="disabled" value="0"/><enum name="normal" value="1"/><enum name="alwaysScroll" value="2"/></attr></declare-styleable><declare-styleable name="HListView"><attr name="android:entries"/><attr name="android:divider"/><attr format="dimension" name="dividerWidth"/><attr format="boolean" name="headerDividersEnabled"/><attr format="boolean" name="footerDividersEnabled"/><attr format="reference|color" name="overScrollHeader"/><attr format="reference|color" name="overScrollFooter"/><attr format="integer" name="measureWithChild"/></declare-styleable></configuration></mergedItems></merger>
