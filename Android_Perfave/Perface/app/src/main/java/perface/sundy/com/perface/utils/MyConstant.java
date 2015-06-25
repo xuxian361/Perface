@@ -12,7 +12,7 @@ public class MyConstant {
     public static int SCREEN_HEIGHT = 1080;
     public static float SCREEN_DENSITY = DisplayMetrics.DENSITY_HIGH;
 
-    private static final String HTTP_UAT = "http://113.105.8.170:8080/weixiu";
+    private static final String HTTP_UAT = "http://www.duitang.com";
     public static final String HTTP_BASE = HTTP_UAT;
 
     public static final boolean IsDebug = true;

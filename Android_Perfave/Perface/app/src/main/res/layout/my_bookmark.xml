@@ -24,17 +24,22 @@
             android:layout_height="wrap_content" />
     </RelativeLayout>
 
-    <ScrollView
-        android:id="@+id/scrollView2"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
+        <perface.sundy.com.perface.utils.custom_view.LazyScrollView
+            android:id="@+id/rootScroll"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:focusable="true">
 
-        </LinearLayout>
-    </ScrollView>
+            <RelativeLayout
+                android:id="@+id/rootView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </perface.sundy.com.perface.utils.custom_view.LazyScrollView>
+
+    </RelativeLayout>
+
 </LinearLayout>
