@@ -39,11 +39,12 @@ import perface.sundy.com.perface.utils.custom_view.LazyScrollView;
 import perface.sundy.com.perface.vo.DuitangInfo;
 
 /**
- * Created by sundy on 15/6/23.
+ * Created by sundy on 15/6/27.
  */
-public class MyBookmarkFragment extends BaseFragment implements LazyScrollView.OnScrollListener {
+public class PhotoDetailFragment extends BaseFragment implements LazyScrollView.OnScrollListener {
 
-    private final String TAG = "MyBookmarkFragment";
+    private final String TAG = "PhotoDetailFragment";
+    private String url;
     private View v;
     private Fragment fragment;
     private LayoutInflater mInflater;
@@ -59,11 +60,15 @@ public class MyBookmarkFragment extends BaseFragment implements LazyScrollView.O
     private List<DuitangInfo> infos = new ArrayList<DuitangInfo>();
     List<Point> lostPoint = new ArrayList<Point>();// 用于记录空白块的位置
 
-    public MyBookmarkFragment() {
+    public PhotoDetailFragment() {
     }
 
-    public MyBookmarkFragment(Fragment fragment) {
+    public PhotoDetailFragment(Fragment fragment) {
         this.fragment = fragment;
+    }
+
+    public PhotoDetailFragment(String url) {
+        this.url = url;
     }
 
     @Override
@@ -74,7 +79,7 @@ public class MyBookmarkFragment extends BaseFragment implements LazyScrollView.O
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         this.inflater = inflater;
-        v = inflater.inflate(R.layout.my_bookmark, container, false);
+        v = inflater.inflate(R.layout.photp_detail, container, false);
         aq = new AQuery(v);
 
         init();
@@ -82,7 +87,7 @@ public class MyBookmarkFragment extends BaseFragment implements LazyScrollView.O
     }
 
     private void init() {
-        aq.id(R.id.txt_title).text(R.string.my_bookmark).visible();
+        aq.id(R.id.txt_title).text("女王装").visible();
         rootView = (RelativeLayout) aq.id(R.id.rootView).getView();
         rootView.setPersistentDrawingCache(ViewGroup.PERSISTENT_ANIMATION_CACHE);
         rootScroll = (LazyScrollView) aq.id(R.id.rootScroll).getView();
@@ -201,7 +206,7 @@ public class MyBookmarkFragment extends BaseFragment implements LazyScrollView.O
                 @Override
                 public void onClick(View view) {
                     rtLog(TAG, "----------->URI = " + uri);
-                    mCallback.addContent(new PhotoDetailFragment(uri));
+                    mCallback.addContent(new PhotoScaleDetailFragment(uri));
                 }
             });
             picView.setOnLongClickListener(new View.OnLongClickListener() {
@@ -369,15 +374,6 @@ public class MyBookmarkFragment extends BaseFragment implements LazyScrollView.O
         v.startAnimation(rotation);
     }
 
-    private View.OnClickListener onClickListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            switch (view.getId()) {
-
-            }
-        }
-    };
-
     @Override
     public void onResume() {
         super.onResume();
@@ -415,4 +411,6 @@ public class MyBookmarkFragment extends BaseFragment implements LazyScrollView.O
     public void onAutoScroll(int l, int t, int oldl, int oldt) {
 
     }
+
 }
+

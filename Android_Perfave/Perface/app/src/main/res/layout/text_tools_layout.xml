@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#88FFFFFF"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btn_font_small"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/icon_font_small" />
+
+            <ImageButton
+                android:id="@+id/btn_font_big"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/icon_font_big" />
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <ImageButton
+                    android:id="@+id/btn_white"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/white_bg2"
+                    android:scaleType="fitCenter" />
+
+                <ImageButton
+                    android:id="@+id/btn_black"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/black"
+                    android:scaleType="fitCenter" />
+
+                <ImageButton
+                    android:id="@+id/btn_red"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="#d93c3b"
+                    android:scaleType="fitCenter" />
+
+                <ImageButton
+                    android:id="@+id/btn_green"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="#6fbcb3"
+                    android:scaleType="fitCenter" />
+
+                <ImageButton
+                    android:id="@+id/btn_blue"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="#1567bc"
+                    android:scaleType="fitCenter" />
+
+                <ImageButton
+                    android:id="@+id/btn_purple"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="#b333bc"
+                    android:scaleType="fitCenter" />
+
+                <ImageButton
+                    android:id="@+id/btn_yellow"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="#bca717"
+                    android:scaleType="fitCenter" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+</LinearLayout>
