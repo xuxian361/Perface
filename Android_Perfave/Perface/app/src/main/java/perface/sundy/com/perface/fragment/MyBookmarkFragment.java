@@ -1,5 +1,6 @@
 package perface.sundy.com.perface.fragment;
 
+import android.app.Dialog;
 import android.content.res.Configuration;
 import android.graphics.Point;
 import android.os.Bundle;
@@ -58,7 +59,6 @@ public class MyBookmarkFragment extends BaseFragment implements LazyScrollView.O
     private List<DuitangInfo> infos = new ArrayList<DuitangInfo>();
     List<Point> lostPoint = new ArrayList<Point>();// 用于记录空白块的位置
 
-
     public MyBookmarkFragment() {
     }
 
@@ -82,6 +82,7 @@ public class MyBookmarkFragment extends BaseFragment implements LazyScrollView.O
     }
 
     private void init() {
+        aq.id(R.id.txt_title).text(R.string.my_bookmark).visible();
         rootView = (RelativeLayout) aq.id(R.id.rootView).getView();
         rootView.setPersistentDrawingCache(ViewGroup.PERSISTENT_ANIMATION_CACHE);
         rootScroll = (LazyScrollView) aq.id(R.id.rootScroll).getView();
@@ -110,7 +111,6 @@ public class MyBookmarkFragment extends BaseFragment implements LazyScrollView.O
     }
 
     private void getMyBookMarks() {
-
         String tag_json_obj = "json_mybookmark";
         String url = MyConstant.HTTP_BASE + "/album/1733789/masn/p/1/24/";
         JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.POST,
@@ -150,7 +150,8 @@ public class MyBookmarkFragment extends BaseFragment implements LazyScrollView.O
 
                                         v.setLayoutParams(params);
                                     }
-                                    addView(v, infos.get(i).getIsrc());
+                                    addView(v, infos.get(i));
+
                                 }
                             }
                         } catch (IOException e) {
@@ -191,27 +192,98 @@ public class MyBookmarkFragment extends BaseFragment implements LazyScrollView.O
         return duitangs;
     }
 
-    private synchronized void addView(View view, final String uri) {
-        placeBrick(view);
-        ImageView picView = (ImageView) view.findViewById(R.id.imageView);
-        picView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                rtLog(TAG,"----------->URI = " + uri);
-            }
-        });
-        picView.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View view) {
-                rtLog(TAG,"----------->URI 2= " + uri);
-                return true;
-            }
-        });
-        rootView.addView(view);
-        startAnim(view);
-        ImageLoader imageLoader = MyApp.getInstance().getImageLoader();
-        imageLoader.get(uri, ImageLoader.getImageListener(picView, R.mipmap.pho_symble, R.mipmap.empty_photo));
-
+    private synchronized void addView(View view, DuitangInfo info) {
+        try {
+            final String uri = info.getIsrc();
+            placeBrick(view);
+            ImageView picView = (ImageView) view.findViewById(R.id.imageView);
+            picView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    rtLog(TAG, "----------->URI = " + uri);
+                }
+            });
+            picView.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View view) {
+                    View dialog_view = inflater.inflate(R.layout.dialog_operation, null);
+                    final Dialog dialog = new Dialog(context, R.style.dialog);
+                    dialog.setContentView(dialog_view);
+                    AQuery aq1 = new AQuery(dialog_view);
+                    aq1.id(R.id.btn_facebook).clicked(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            rtLog(TAG, "----------->URI btn_facebook= " + uri);
+                            dialog.cancel();
+                            dialog.dismiss();
+                        }
+                    });
+                    aq1.id(R.id.btn_qq).clicked(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            rtLog(TAG, "----------->URI btn_qq= " + uri);
+                            dialog.cancel();
+                            dialog.dismiss();
+                        }
+                    });
+                    aq1.id(R.id.btn_qq_zone).clicked(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            rtLog(TAG, "----------->URI btn_qq_zone= " + uri);
+                            dialog.cancel();
+                            dialog.dismiss();
+                        }
+                    });
+                    aq1.id(R.id.btn_wechat).clicked(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            rtLog(TAG, "----------->URI btn_wechat= " + uri);
+                            dialog.cancel();
+                            dialog.dismiss();
+                        }
+                    });
+                    aq1.id(R.id.btn_wechat_favorite).clicked(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            rtLog(TAG, "----------->URI btn_wechat_favorite= " + uri);
+                            dialog.cancel();
+                            dialog.dismiss();
+                        }
+                    });
+                    aq1.id(R.id.btn_wechat_moment).clicked(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            rtLog(TAG, "----------->URI btn_wechat_moment= " + uri);
+                            dialog.cancel();
+                            dialog.dismiss();
+                        }
+                    });
+                    aq1.id(R.id.btn_cancel_bookmark).clicked(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            rtLog(TAG, "----------->URI btn_delete= " + uri);
+                            dialog.cancel();
+                            dialog.dismiss();
+                        }
+                    });
+                    aq1.id(R.id.btn_cancel).clicked(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            dialog.cancel();
+                            dialog.dismiss();
+                        }
+                    });
+                    dialog.show();
+                    return true;
+                }
+            });
+            rootView.addView(view);
+            startAnim(view);
+            ImageLoader imageLoader = MyApp.getInstance().getImageLoader();
+            imageLoader.get(uri, ImageLoader.getImageListener(picView, R.mipmap.pho_symble, R.mipmap.empty_photo));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -295,6 +367,15 @@ public class MyBookmarkFragment extends BaseFragment implements LazyScrollView.O
 
         v.startAnimation(rotation);
     }
+
+    private View.OnClickListener onClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            switch (view.getId()) {
+
+            }
+        }
+    };
 
     @Override
     public void onResume() {

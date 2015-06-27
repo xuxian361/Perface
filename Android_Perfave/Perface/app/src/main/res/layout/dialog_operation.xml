@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_corner_bg_white_stroke_green"
+        android:orientation="vertical"
+        android:paddingBottom="25dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="25dp">
+
+        <Button
+            android:id="@+id/btn_share"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white_bg"
+            android:gravity="center"
+            android:text="@string/share"
+            android:textColor="@color/black2"
+            android:textSize="16sp"
+            android:typeface="monospace" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@color/white_bg"
+            android:layout_marginTop="-10dp">
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/btn_facebook"
+                android:src="@mipmap/logo_facebook"
+                android:scaleType="fitCenter"
+                android:background="@null"
+                android:layout_weight="1"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="2dp" />
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/btn_qq"
+                android:src="@mipmap/logo_qq"
+                android:scaleType="fitCenter"
+                android:background="@null"
+                android:layout_weight="1"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp" />
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/btn_qq_zone"
+                android:src="@mipmap/logo_qzone"
+                android:scaleType="fitCenter"
+                android:background="@null"
+                android:layout_weight="1"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp" />
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/btn_wechat"
+                android:src="@mipmap/logo_wechat"
+                android:scaleType="fitCenter"
+                android:background="@null"
+                android:layout_weight="1"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp" />
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/btn_wechat_favorite"
+                android:src="@mipmap/logo_wechatfavorite"
+                android:scaleType="fitCenter"
+                android:background="@null"
+                android:layout_weight="1"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp" />
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/btn_wechat_moment"
+                android:src="@mipmap/logo_wechatmoments"
+                android:scaleType="fitCenter"
+                android:background="@null"
+                android:layout_weight="1"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="3dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_cancel_bookmark"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/white_bg"
+            android:gravity="center"
+            android:text="@string/cancel_bookmark"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:typeface="monospace" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white_bg"
+            android:text="@string/cancel"
+            android:textColor="@color/black2"
+            android:textSize="16dp"
+            android:typeface="monospace" />
+    </LinearLayout>
+</RelativeLayout>

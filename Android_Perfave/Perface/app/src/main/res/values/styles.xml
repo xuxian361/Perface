@@ -5,6 +5,11 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/transparent</item>
+        <!--背景透明-->
+    </style>
+
     <style name="txt_font_black_8">
         <item name="android:ellipsize">marquee</item>
         <item name="android:textSize">8sp</item>
