@@ -5,26 +5,25 @@
     android:background="@color/green_bg"
     android:orientation="vertical">
 
-    <ScrollView
-        android:id="@+id/scrollView"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="16dp"
-        android:scrollbars="none"
         android:layout_above="@+id/user_pic">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_margin="16dp">
 
             <TextView
                 android:id="@+id/btn_home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/home"
-                android:textColor="@color/white_bg2"
-                android:textSize="32sp"
+                android:textColor="@color/white_bg"
+                android:textSize="20sp"
                 android:typeface="monospace" />
 
 
@@ -32,25 +31,25 @@
                 android:id="@+id/btn_my_photo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="26dp"
                 android:text="@string/my_photo"
-                android:textColor="@color/white_bg2"
-                android:textSize="32sp"
-                android:typeface="monospace" />
+                android:textColor="@color/white_bg"
+                android:textSize="20sp"
+                android:typeface="monospace"
+                android:layout_marginBottom="26dp" />
 
 
             <TextView
                 android:id="@+id/btn_my_bookmark"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
                 android:text="@string/my_bookmark"
-                android:textColor="@color/white_bg2"
-                android:textSize="32sp"
+                android:textColor="@color/white_bg"
+                android:textSize="20sp"
                 android:typeface="monospace" />
 
         </LinearLayout>
-    </ScrollView>
+    </RelativeLayout>
 
 
     <perface.sundy.com.perface.utils.custom_view.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
