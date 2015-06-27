@@ -26,13 +26,15 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="-30dp">
 
         <perface.sundy.com.perface.utils.custom_view.LazyScrollView
             android:id="@+id/rootScroll"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:focusable="true">
+            android:focusable="true"
+            android:paddingBottom="10dp">
 
             <RelativeLayout
                 android:id="@+id/rootView"

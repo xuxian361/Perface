@@ -49,7 +49,7 @@ public class MyBookmarkFragment extends BaseFragment implements LazyScrollView.O
     private RelativeLayout rootView;
     private LazyScrollView rootScroll;
 
-    private static final int COLUMNCOUNT = 4;
+    private static final int COLUMNCOUNT = 3;
     private int columnWidth = 250;// 每个item的宽度
     private int itemHeight = 0;
     private int rowCountPerScreen = 3;
@@ -191,13 +191,27 @@ public class MyBookmarkFragment extends BaseFragment implements LazyScrollView.O
         return duitangs;
     }
 
-    private synchronized void addView(View view, String uri) {
+    private synchronized void addView(View view, final String uri) {
         placeBrick(view);
         ImageView picView = (ImageView) view.findViewById(R.id.imageView);
+        picView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                rtLog(TAG,"----------->URI = " + uri);
+            }
+        });
+        picView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                rtLog(TAG,"----------->URI 2= " + uri);
+                return true;
+            }
+        });
         rootView.addView(view);
         startAnim(view);
         ImageLoader imageLoader = MyApp.getInstance().getImageLoader();
         imageLoader.get(uri, ImageLoader.getImageListener(picView, R.mipmap.pho_symble, R.mipmap.empty_photo));
+
     }
 
     /**
@@ -213,7 +227,6 @@ public class MyBookmarkFragment extends BaseFragment implements LazyScrollView.O
         colSpan = (int) Math.ceil(brick.width / this.columnWidth);// 计算跨几列
         colSpan = Math.min(colSpan, this.cols);// 取最小的列数
         rowSpan = (int) Math.ceil(brick.height / this.itemHeight);
-        Log.d("VideoShowActivity", "colSpan:" + colSpan);
         if (colSpan == 1) {
             groupY = this.colYs;
             // 如果存在白块则从添加到白块中
@@ -282,7 +295,6 @@ public class MyBookmarkFragment extends BaseFragment implements LazyScrollView.O
 
         v.startAnimation(rotation);
     }
-
 
     @Override
     public void onResume() {
