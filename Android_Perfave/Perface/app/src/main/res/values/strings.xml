@@ -24,5 +24,10 @@
     <string name="delete">删除</string>
     <string name="cancel_bookmark">取消收藏</string>
     <string name="confirm_upload">确定上传</string>
+    <string name="photo_album">相册</string>
+    <string name="take_photo">拍照</string>
+    <string name="word">文字</string>
+    <string name="beautify">美化</string>
+    <string name="fuzzy">模糊</string>
 
 </resources>

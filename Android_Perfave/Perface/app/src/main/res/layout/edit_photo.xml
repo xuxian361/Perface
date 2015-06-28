@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <RelativeLayout
+        android:id="@+id/relative_top_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            layout="@layout/topbar_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/btnSave"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:background="@null"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/abc_ic_menu_paste_mtrl_am_alpha" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relative_top_bg">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/linear_bottom">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/fuzzy"
+                android:id="@+id/txt_fuzzy"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white_bg"
+                android:typeface="monospace"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/beautify"
+                android:id="@+id/txt_beautify"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white_bg"
+                android:typeface="monospace"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/word"
+                android:id="@+id/txt_word"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white_bg"
+                android:typeface="monospace"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:id="@+id/image_line"
+            android:background="@color/white_bg"
+            android:layout_above="@+id/linear_bottom" />
+
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/text_tools_layout"
+            android:layout_above="@+id/image_line" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

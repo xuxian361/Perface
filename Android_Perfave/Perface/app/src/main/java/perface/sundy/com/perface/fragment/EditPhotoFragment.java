@@ -5,29 +5,30 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.GridView;
 
 import com.androidquery.AQuery;
 
 import perface.sundy.com.perface.R;
-import perface.sundy.com.perface.adapter.PhotoGridAdapter;
 
 /**
- * Created by sundy on 15/6/27.
+ * Created by sundy on 15/6/28.
  */
-public class UploadPhotoFragment extends BaseFragment {
+public class EditPhotoFragment extends BaseFragment {
 
-    private final String TAG = "UploadPhotoFragment";
+    private final String TAG = "EditPhotoFragment";
     private View v;
     private Fragment fragment;
-    private GridView gv_photos;
-    private PhotoGridAdapter adapter;
+    private String url;
 
-    public UploadPhotoFragment() {
+    public EditPhotoFragment() {
     }
 
-    public UploadPhotoFragment(Fragment fragment) {
+    public EditPhotoFragment(Fragment fragment) {
         this.fragment = fragment;
+    }
+
+    public EditPhotoFragment(String url) {
+        this.url = url;
     }
 
     @Override
@@ -38,7 +39,7 @@ public class UploadPhotoFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         this.inflater = inflater;
-        v = inflater.inflate(R.layout.upload_photo, container, false);
+        v = inflater.inflate(R.layout.edit_photo, container, false);
         aq = new AQuery(v);
 
         init();
@@ -46,20 +47,9 @@ public class UploadPhotoFragment extends BaseFragment {
     }
 
     private void init() {
-        aq.id(R.id.txt_title).text(R.string.my_photo).visible();
-        adapter = new PhotoGridAdapter(context, inflater);
-        gv_photos = aq.id(R.id.gv_photos).getGridView();
-        gv_photos.setAdapter(adapter);
-        gv_photos.setOnItemClickListener(onItemClickListener);
-    }
+        aq.id(R.id.txt_title).text("女王装").visible();
 
-    android.widget.AdapterView.OnItemClickListener onItemClickListener = new android.widget.AdapterView.OnItemClickListener() {
-        @Override
-        public void onItemClick(android.widget.AdapterView<?> adapterView, View view, int i, long l) {
-            rtLog(TAG, "------------>i = " + i);
-            mCallback.addContent(new EditPhotoFragment());
-        }
-    };
+    }
 
     @Override
     public void onResume() {
@@ -89,3 +79,4 @@ public class UploadPhotoFragment extends BaseFragment {
         rtLog(TAG, "------------>onPause");
     }
 }
+
