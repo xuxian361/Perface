@@ -22,6 +22,16 @@
             layout="@layout/topbar_menu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/btn_add"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/add_green" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -39,11 +49,11 @@
                 android:padding="16dp">
 
                 <TextView
+                    android:id="@+id/txt_1"
                     style="@style/txt_font_black2_14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/people_can_see"
-                    android:id="@+id/txt_1"
                     android:visibility="gone" />
 
                 <it.sephiroth.android.library.widget.HListView xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -54,15 +64,15 @@
                     android:divider="@null"
                     android:fadingEdge="none"
                     android:scrollbars="none"
-                    app:dividerWidth="14dp"
-                    android:visibility="gone" />
+                    android:visibility="gone"
+                    app:dividerWidth="14dp" />
 
                 <TextView
+                    android:id="@+id/txt_2"
                     style="@style/txt_font_black2_14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/people_cannot_see"
-                    android:id="@+id/txt_2"
                     android:visibility="gone" />
 
                 <it.sephiroth.android.library.widget.HListView xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -73,8 +83,8 @@
                     android:divider="@null"
                     android:fadingEdge="none"
                     android:scrollbars="none"
-                    app:dividerWidth="14dp"
-                    android:visibility="gone" />
+                    android:visibility="gone"
+                    app:dividerWidth="14dp" />
 
             </LinearLayout>
         </ScrollView>
@@ -84,14 +94,14 @@
             android:layout_height="50dp"
             android:layout_alignParentBottom="true">
 
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:id="@+id/btn_add"
+            <ImageButton
+                android:id="@+id/btn_load_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:src="@mipmap/add_green"
-                android:scaleType="center" />
-
+                android:background="@null"
+                android:src="@mipmap/arrow_down_more" />
         </RelativeLayout>
     </RelativeLayout>
 

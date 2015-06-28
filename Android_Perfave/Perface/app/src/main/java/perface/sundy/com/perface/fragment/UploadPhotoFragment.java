@@ -5,25 +5,28 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridView;
 
 import com.androidquery.AQuery;
 
 import perface.sundy.com.perface.R;
+import perface.sundy.com.perface.adapter.PhotoGridAdapter;
 
 /**
- * Created by sundy on 15/6/23.
+ * Created by sundy on 15/6/27.
  */
-public class MyPhotoFragment extends BaseFragment {
+public class UploadPhotoFragment extends BaseFragment {
 
-    private final String TAG = "MyPhotoFragment";
+    private final String TAG = "UploadPhotoFragment";
     private View v;
     private Fragment fragment;
+    private GridView gv_photos;
+    private PhotoGridAdapter adapter;
 
-
-    public MyPhotoFragment() {
+    public UploadPhotoFragment() {
     }
 
-    public MyPhotoFragment(Fragment fragment) {
+    public UploadPhotoFragment(Fragment fragment) {
         this.fragment = fragment;
     }
 
@@ -35,7 +38,7 @@ public class MyPhotoFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         this.inflater = inflater;
-        v = inflater.inflate(R.layout.my_photo, container, false);
+        v = inflater.inflate(R.layout.upload_photo, container, false);
         aq = new AQuery(v);
 
         init();
@@ -44,21 +47,10 @@ public class MyPhotoFragment extends BaseFragment {
 
     private void init() {
         aq.id(R.id.txt_title).text(R.string.my_photo).visible();
-        aq.id(R.id.btn_add).clicked(onClickListener);
-
+        adapter = new PhotoGridAdapter(context, inflater);
+        gv_photos = aq.id(R.id.gv_photos).getGridView();
+        gv_photos.setAdapter(adapter);
     }
-
-    private View.OnClickListener onClickListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            switch (view.getId()) {
-                case R.id.btn_add:
-                    rtLog(TAG, "------------>btn_add");
-                    mCallback.addContent(new UploadPhotoFragment());
-                    break;
-            }
-        }
-    };
 
     @Override
     public void onResume() {

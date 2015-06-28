@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relative_top_bg"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/green_bg">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:background="@mipmap/banner_bg" />
+
+        <include
+            layout="@layout/topbar_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btn_confrim_upload"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/shape_corner_green"
+            android:text="@string/confirm_upload"
+            android:textColor="@color/white_bg"
+            android:textSize="16sp"
+            android:typeface="monospace" />
+
+        <GridView
+            android:id="@+id/gv_photos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btn_confrim_upload"
+            android:columnWidth="120dp"
+            android:horizontalSpacing="5dp"
+            android:numColumns="3"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="5dp"
+            android:padding="6dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

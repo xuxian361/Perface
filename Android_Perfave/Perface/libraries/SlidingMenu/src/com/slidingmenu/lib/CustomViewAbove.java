@@ -1,8 +1,5 @@
 package com.slidingmenu.lib;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Rect;
@@ -28,6 +25,9 @@ import android.widget.Scroller;
 
 import com.slidingmenu.lib.SlidingMenu.OnClosedListener;
 import com.slidingmenu.lib.SlidingMenu.OnOpenedListener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class CustomViewAbove extends ViewGroup {
 
@@ -445,14 +445,17 @@ public class CustomViewAbove extends ViewGroup {
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        try {
+            int width = getDefaultSize(0, widthMeasureSpec);
+            int height = getDefaultSize(0, heightMeasureSpec);
+            setMeasuredDimension(width, height);
 
-        int width = getDefaultSize(0, widthMeasureSpec);
-        int height = getDefaultSize(0, heightMeasureSpec);
-        setMeasuredDimension(width, height);
-
-        final int contentWidth = getChildMeasureSpec(widthMeasureSpec, 0, width);
-        final int contentHeight = getChildMeasureSpec(heightMeasureSpec, 0, height);
-        mContent.measure(contentWidth, contentHeight);
+            final int contentWidth = getChildMeasureSpec(widthMeasureSpec, 0, width);
+            final int contentHeight = getChildMeasureSpec(heightMeasureSpec, 0, height);
+            mContent.measure(contentWidth, contentHeight);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
