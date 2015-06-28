@@ -33,27 +33,26 @@
             android:padding="10dp"
             android:scaleType="fitCenter"
             android:src="@mipmap/btn_delete"
-            android:visibility="gone"/>
+            android:visibility="gone" />
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="-30dp">
+        android:layout_height="match_parent">
 
-        <perface.sundy.com.perface.utils.custom_view.LazyScrollView
-            android:id="@+id/rootScroll"
+        <GridView
+            android:id="@+id/gv_photos"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:focusable="true"
-            android:paddingBottom="10dp">
-
-            <RelativeLayout
-                android:id="@+id/rootView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </perface.sundy.com.perface.utils.custom_view.LazyScrollView>
-
+            android:layout_above="@+id/btn_confrim_upload"
+            android:columnWidth="90dp"
+            android:gravity="center"
+            android:horizontalSpacing="10dp"
+            android:numColumns="3"
+            android:padding="6dp"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="10dp" />
     </RelativeLayout>
 
 </LinearLayout>

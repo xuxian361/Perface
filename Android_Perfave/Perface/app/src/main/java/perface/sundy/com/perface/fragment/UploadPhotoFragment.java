@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.GridView;
 
 import com.androidquery.AQuery;
@@ -51,6 +52,7 @@ public class UploadPhotoFragment extends BaseFragment {
         gv_photos = aq.id(R.id.gv_photos).getGridView();
         gv_photos.setAdapter(adapter);
         gv_photos.setOnItemClickListener(onItemClickListener);
+        gv_photos.setOnItemLongClickListener(onItemLongClickListener);
     }
 
     android.widget.AdapterView.OnItemClickListener onItemClickListener = new android.widget.AdapterView.OnItemClickListener() {
@@ -58,6 +60,14 @@ public class UploadPhotoFragment extends BaseFragment {
         public void onItemClick(android.widget.AdapterView<?> adapterView, View view, int i, long l) {
             rtLog(TAG, "------------>i = " + i);
             mCallback.addContent(new EditPhotoFragment());
+        }
+    };
+
+    AdapterView.OnItemLongClickListener onItemLongClickListener = new AdapterView.OnItemLongClickListener() {
+        @Override
+        public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
+            rtLog(TAG, "------------>i = " + i);
+            return true;
         }
     };
 
