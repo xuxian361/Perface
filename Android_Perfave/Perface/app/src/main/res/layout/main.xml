@@ -3,8 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white_bg"
-    android:orientation="vertical"
-    android:onClick="onClick">
+    android:onClick="onClick"
+    android:orientation="vertical">
 
     <RelativeLayout
         android:id="@+id/relative_top_bg"
@@ -25,16 +25,150 @@
             android:layout_height="wrap_content" />
     </RelativeLayout>
 
-    <ScrollView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:id="@+id/linear_sort1"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/txt_hot"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/hot"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:typeface="monospace" />
+
+            <TextView
+                android:id="@+id/txt_new"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/new_str"
+                android:textColor="#bc6010"
+                android:textSize="14sp"
+                android:typeface="monospace" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/linear_sort2"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_below="@+id/linear_sort1"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <HorizontalScrollView
+                android:id="@+id/sv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/txt_more">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_1"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="田园"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:typeface="monospace" />
+
+                    <TextView
+                        android:id="@+id/txt_2"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="日系"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:typeface="monospace" />
+
+                    <TextView
+                        android:id="@+id/txt_3"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="帅锅"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:typeface="monospace" />
+
+                    <TextView
+                        android:id="@+id/txt_4"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="美女"
+                        android:textColor="#bc6010"
+                        android:textSize="14sp"
+                        android:typeface="monospace" />
+
+                    <TextView
+                        android:id="@+id/txt_5"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="搞笑"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:typeface="monospace" />
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/txt_more"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/more"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:typeface="monospace"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true" />
+
+        </RelativeLayout>
+
+        <GridView
+            android:id="@+id/gv_photos"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:layout_below="@+id/linear_sort2"
+            android:columnWidth="90dp"
+            android:gravity="center"
+            android:horizontalSpacing="10dp"
+            android:numColumns="3"
+            android:padding="6dp"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="10dp" />
 
-        </LinearLayout>
-    </ScrollView>
+    </RelativeLayout>
+
 </LinearLayout>

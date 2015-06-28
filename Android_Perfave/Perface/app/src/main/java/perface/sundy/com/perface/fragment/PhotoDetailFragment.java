@@ -264,15 +264,18 @@ public class PhotoDetailFragment extends BaseFragment implements LazyScrollView.
                             dialog.dismiss();
                         }
                     });
-                    if (fragment != null && fragment instanceof MyPhotoFragment) {
-                        aq1.id(R.id.btn_cancel_bookmark).gone();
-                    } else if (fragment != null && fragment instanceof MyBookmarkFragment) {
-                        aq1.id(R.id.btn_cancel_bookmark).visible();
-                    }
                     aq1.id(R.id.btn_cancel_bookmark).clicked(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
                             rtLog(TAG, "----------->URI btn_delete= " + uri);
+                            dialog.cancel();
+                            dialog.dismiss();
+                        }
+                    });
+                    aq1.id(R.id.btn_add_bookmark).clicked(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            rtLog(TAG, "----------->URI btn_add_bookmark= " + uri);
                             dialog.cancel();
                             dialog.dismiss();
                         }
@@ -284,6 +287,16 @@ public class PhotoDetailFragment extends BaseFragment implements LazyScrollView.
                             dialog.dismiss();
                         }
                     });
+                    if (fragment != null && fragment instanceof MyPhotoFragment) {
+                        aq1.id(R.id.btn_add_bookmark).gone();
+                        aq1.id(R.id.btn_cancel_bookmark).gone();
+                    } else if (fragment != null && fragment instanceof MyBookmarkFragment) {
+                        aq1.id(R.id.btn_add_bookmark).gone();
+                        aq1.id(R.id.btn_cancel_bookmark).visible();
+                    } else if (fragment != null && fragment instanceof MainFragment) {
+                        aq1.id(R.id.btn_add_bookmark).visible();
+                        aq1.id(R.id.btn_cancel_bookmark).gone();
+                    }
                     dialog.show();
                     return true;
                 }
