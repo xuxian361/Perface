@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white_bg"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:onClick="onClick">
 
     <RelativeLayout
         android:id="@+id/relative_top_bg"
@@ -38,56 +39,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ScrollView
+        <GridView
+            android:id="@+id/gv_photos"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <TextView
-                    android:id="@+id/txt_1"
-                    style="@style/txt_font_black2_14"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/people_can_see"
-                    android:visibility="gone" />
-
-                <it.sephiroth.android.library.widget.HListView xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/lv_1"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:layout_margin="5dp"
-                    android:divider="@null"
-                    android:fadingEdge="none"
-                    android:scrollbars="none"
-                    android:visibility="gone"
-                    app:dividerWidth="14dp" />
-
-                <TextView
-                    android:id="@+id/txt_2"
-                    style="@style/txt_font_black2_14"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/people_cannot_see"
-                    android:visibility="gone" />
-
-                <it.sephiroth.android.library.widget.HListView xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/lv_2"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:layout_margin="5dp"
-                    android:divider="@null"
-                    android:fadingEdge="none"
-                    android:scrollbars="none"
-                    android:visibility="gone"
-                    app:dividerWidth="14dp" />
-
-            </LinearLayout>
-        </ScrollView>
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btn_confrim_upload"
+            android:columnWidth="90dp"
+            android:gravity="center"
+            android:horizontalSpacing="10dp"
+            android:numColumns="3"
+            android:padding="6dp"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="10dp" />
 
         <RelativeLayout
             android:layout_width="match_parent"

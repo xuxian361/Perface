@@ -3,7 +3,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/green_bg"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:onClick="onClick">
+
+    <RelativeLayout
+        android:id="@+id/relative_top_bg"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/green_bg">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:background="@mipmap/banner_bg" />
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -13,9 +28,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_centerVertical="true"
-            android:layout_margin="16dp">
+            android:layout_margin="16dp"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/btn_home"
@@ -31,12 +46,12 @@
                 android:id="@+id/btn_my_photo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="26dp"
                 android:layout_marginTop="26dp"
                 android:text="@string/my_photo"
                 android:textColor="@color/white_bg"
                 android:textSize="20sp"
-                android:typeface="monospace"
-                android:layout_marginBottom="26dp" />
+                android:typeface="monospace" />
 
 
             <TextView
@@ -56,11 +71,11 @@
         android:id="@+id/user_pic"
         android:layout_width="76dp"
         android:layout_height="76dp"
+        android:layout_alignParentBottom="true"
         android:layout_gravity="center_horizontal"
+        android:layout_margin="16dp"
         android:src="@mipmap/profile_img"
         app:border_color="@color/green_bg"
-        app:border_width="1dp"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="16dp" />
+        app:border_width="1dp" />
 
 </RelativeLayout>

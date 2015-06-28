@@ -29,5 +29,9 @@
     <string name="word">文字</string>
     <string name="beautify">美化</string>
     <string name="fuzzy">模糊</string>
+    <string name="edit">编辑</string>
+    <string name="update_album_name">修改图册名字</string>
+    <string name="delete_album">删除该图册</string>
+    <string name="confirm">确定</string>
 
 </resources>

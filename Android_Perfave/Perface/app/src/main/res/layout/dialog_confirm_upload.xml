@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_corner_bg_white_stroke_green"
+        android:orientation="vertical"
+        android:paddingBottom="25dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="25dp">
+
+        <EditText
+            android:id="@+id/edt_name"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="2dp"
+            android:textSize="18sp"
+            android:typeface="monospace"
+            android:layout_alignParentBottom="false"
+            android:layout_toLeftOf="@+id/btn_update_name"
+            android:textColor="@color/black2"
+            android:hint="图册名称" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:background="@color/white_bg"
+                android:text="@string/cancel"
+                android:textColor="@color/black2"
+                android:textSize="16dp"
+                android:typeface="monospace" />
+
+            <Button
+                android:id="@+id/btn_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:background="@color/white_bg"
+                android:text="@string/confirm"
+                android:textColor="@color/green_bg"
+                android:textSize="16dp"
+                android:typeface="monospace" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

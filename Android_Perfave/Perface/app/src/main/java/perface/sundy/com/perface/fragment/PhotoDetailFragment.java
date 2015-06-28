@@ -264,6 +264,11 @@ public class PhotoDetailFragment extends BaseFragment implements LazyScrollView.
                             dialog.dismiss();
                         }
                     });
+                    if (fragment != null && fragment instanceof MyPhotoFragment) {
+                        aq1.id(R.id.btn_cancel_bookmark).gone();
+                    } else if (fragment != null && fragment instanceof MyBookmarkFragment) {
+                        aq1.id(R.id.btn_cancel_bookmark).visible();
+                    }
                     aq1.id(R.id.btn_cancel_bookmark).clicked(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {

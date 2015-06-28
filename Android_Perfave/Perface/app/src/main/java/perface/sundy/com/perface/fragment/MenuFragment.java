@@ -59,7 +59,6 @@ public class MenuFragment extends Fragment implements View.OnClickListener {
         aq = new AQuery(v);
 
         init();
-
         return v;
     }
 

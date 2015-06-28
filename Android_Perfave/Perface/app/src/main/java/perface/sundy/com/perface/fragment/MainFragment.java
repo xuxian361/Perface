@@ -42,6 +42,7 @@ public class MainFragment extends BaseFragment {
     }
 
     private void init() {
+        aq.id(R.id.txt_title).text(R.string.home).visible();
     }
 
     @Override
