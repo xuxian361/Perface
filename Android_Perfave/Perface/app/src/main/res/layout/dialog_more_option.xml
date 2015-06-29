@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_confirm"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/shape_corner_bg_white_stroke_green">
+
+        <LinearLayout
+            android:id="@+id/linear_sort1"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/txt_hot"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/hot"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:typeface="monospace" />
+
+            <TextView
+                android:id="@+id/txt_new"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/new_str"
+                android:textColor="#bc6010"
+                android:textSize="14sp"
+                android:typeface="monospace" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollView2"
+            android:layout_below="@+id/linear_sort1">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <perface.sundy.com.perface.utils.custom_view.FixedGridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/fixedv_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linear_sort1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp" />
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/shape_corner_green"
+        android:text="@string/confirm"
+        android:textColor="@color/white_bg"
+        android:typeface="monospace" />
+
+    <ImageButton
+        android:id="@+id/btn_cancel"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:src="@mipmap/icon_cancel" />
+</RelativeLayout>
