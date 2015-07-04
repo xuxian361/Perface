@@ -3,8 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white_bg"
-    android:orientation="vertical"
-    android:onClick="onClick">
+    android:onClick="onClick"
+    android:orientation="vertical">
 
     <RelativeLayout
         android:id="@+id/relative_top_bg"
@@ -65,37 +65,37 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp">
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
 
                     <EditText
                         android:id="@+id/edt_nickname"
                         android:layout_width="match_parent"
                         android:layout_height="45dp"
+                        android:layout_alignParentBottom="false"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
                         android:layout_marginTop="12dp"
+                        android:layout_toLeftOf="@+id/btn_update_name"
                         android:gravity="center"
                         android:inputType="text"
                         android:maxLines="1"
                         android:padding="2dp"
                         android:text="Sundy Xu"
                         android:textSize="14sp"
-                        android:typeface="monospace"
-                        android:layout_alignParentBottom="false"
-                        android:layout_toLeftOf="@+id/btn_update_name" />
+                        android:typeface="monospace" />
 
                     <ImageButton
                         android:id="@+id/btn_update_name"
                         android:layout_width="wrap_content"
                         android:layout_height="20dp"
+                        android:layout_alignParentBottom="false"
                         android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
                         android:background="@null"
                         android:scaleType="fitEnd"
                         android:src="@mipmap/correct_black"
-                        android:layout_alignParentBottom="false"
-                        android:layout_centerVertical="true"
                         android:visibility="gone" />
                 </RelativeLayout>
 
@@ -134,34 +134,33 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="22dp">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+
+                    <TextView
+                        style="@style/txt_font_black_14"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/update_password" />
 
-                        <ImageView
-                            android:id="@+id/img_arrow"
-                            android:layout_width="15dp"
-                            android:layout_height="15dp"
-                            android:src="@mipmap/arrow_down_black" />
-
-                        <TextView
-                            style="@style/txt_font_black_14"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_toRightOf="@+id/img_arrow"
-                            android:text="@string/update_password" />
-                    </LinearLayout>
+                    <ImageView
+                        android:id="@+id/img_arrow"
+                        android:layout_width="40dp"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/arrow_down_black2"
+                        android:layout_alignParentRight="true"
+                        android:scaleType="fitCenter" />
 
                     <ImageButton
                         android:id="@+id/btn_confirm"
-                        android:layout_width="60dp"
+                        android:layout_width="40dp"
                         android:layout_height="20dp"
-                        android:layout_alignParentRight="true"
+                        android:layout_alignParentRight="false"
                         android:background="@null"
-                        android:scaleType="fitEnd"
-                        android:src="@mipmap/correct_black" />
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/correct_black"
+                        android:padding="3dp"
+                        android:layout_toLeftOf="@+id/img_arrow"
+                        android:visibility="gone" />
 
                 </RelativeLayout>
 
@@ -169,7 +168,8 @@
                     android:id="@+id/linear_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:visibility="gone">
 
                     <EditText
                         android:id="@+id/edt_password"

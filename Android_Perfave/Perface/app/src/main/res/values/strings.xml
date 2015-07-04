@@ -38,5 +38,6 @@
     <string name="new_str">最新</string>
     <string name="more">更多</string>
     <string name="album">相簿</string>
+    <string name="my_info">我的信息</string>
 
 </resources>
