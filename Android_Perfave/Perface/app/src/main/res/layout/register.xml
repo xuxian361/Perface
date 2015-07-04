@@ -143,6 +143,7 @@
 
 
             <RelativeLayout
+                android:id="@+id/relative_header"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center_horizontal"
