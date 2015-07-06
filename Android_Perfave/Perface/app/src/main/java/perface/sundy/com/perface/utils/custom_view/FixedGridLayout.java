@@ -62,7 +62,7 @@ public class FixedGridLayout extends ViewGroup {
         //创建画笔
         Paint mPaint = new Paint();
         //设置画笔的各个属性
-        mPaint.setColor(Color.WHITE);
+        mPaint.setColor(Color.TRANSPARENT);
         mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setStrokeWidth(0);
         mPaint.setAntiAlias(true);

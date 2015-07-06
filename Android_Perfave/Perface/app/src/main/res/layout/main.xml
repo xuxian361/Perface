@@ -23,6 +23,18 @@
             layout="@layout/topbar_menu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/btnExchange"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:background="@null"
+            android:padding="10dp"
+            android:scaleType="center"
+            android:src="@mipmap/style_listview" />
+
     </RelativeLayout>
 
     <RelativeLayout
@@ -61,113 +73,53 @@
                 android:typeface="monospace" />
         </LinearLayout>
 
-        <RelativeLayout
-            android:id="@+id/linear_sort2"
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:layout_below="@+id/linear_sort1"
-            android:orientation="horizontal"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp">
+        <!--<GridView-->
+        <!--android:id="@+id/gv_photos"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_below="@+id/linear_sort1"-->
+        <!--android:columnWidth="90dp"-->
+        <!--android:gravity="center"-->
+        <!--android:horizontalSpacing="10dp"-->
+        <!--android:numColumns="3"-->
+        <!--android:padding="6dp"-->
+        <!--android:scrollbars="none"-->
+        <!--android:stretchMode="columnWidth"-->
+        <!--android:verticalSpacing="10dp" />-->
 
-            <HorizontalScrollView
-                android:id="@+id/sv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_toLeftOf="@+id/txt_more">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/txt_1"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:maxLines="1"
-                        android:text="田园"
-                        android:textColor="@color/black"
-                        android:textSize="14sp"
-                        android:typeface="monospace" />
-
-                    <TextView
-                        android:id="@+id/txt_2"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:maxLines="1"
-                        android:text="日系"
-                        android:textColor="@color/black"
-                        android:textSize="14sp"
-                        android:typeface="monospace" />
-
-                    <TextView
-                        android:id="@+id/txt_3"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:maxLines="1"
-                        android:text="帅锅"
-                        android:textColor="@color/black"
-                        android:textSize="14sp"
-                        android:typeface="monospace" />
-
-                    <TextView
-                        android:id="@+id/txt_4"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:maxLines="1"
-                        android:text="美女"
-                        android:textColor="#bc6010"
-                        android:textSize="14sp"
-                        android:typeface="monospace" />
-
-                    <TextView
-                        android:id="@+id/txt_5"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:maxLines="1"
-                        android:text="搞笑"
-                        android:textColor="@color/black"
-                        android:textSize="14sp"
-                        android:typeface="monospace" />
-                </LinearLayout>
-
-            </HorizontalScrollView>
-
-            <TextView
-                android:id="@+id/txt_more"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:maxLines="1"
-                android:text="@string/more"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                android:typeface="monospace"
-                android:layout_centerVertical="true"
-                android:layout_alignParentRight="true" />
-
-        </RelativeLayout>
-
-        <GridView
+        <android.support.v7.widget.RecyclerView
             android:id="@+id/gv_photos"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/linear_sort2"
-            android:columnWidth="90dp"
-            android:gravity="center"
-            android:horizontalSpacing="10dp"
-            android:numColumns="3"
-            android:padding="6dp"
-            android:scrollbars="none"
-            android:stretchMode="columnWidth"
-            android:verticalSpacing="10dp" />
+            android:layout_below="@+id/linear_sort1"
+            />
+
+        <!--<it.sephiroth.android.library.widget.HListView xmlns:app="http://schemas.android.com/apk/res/perface.sundy.com.perface"-->
+            <!--android:id="@+id/hlv_photos"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/linear_sort1"-->
+            <!--android:layout_margin="5dp"-->
+            <!--android:divider="@null"-->
+            <!--android:fadingEdge="none"-->
+            <!--android:scrollbars="none"-->
+            <!--app:dividerWidth="12dp" />-->
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true">
+
+            <ImageButton
+                android:id="@+id/btn_load_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@null"
+                android:src="@mipmap/arrow_down_more" />
+        </RelativeLayout>
 
     </RelativeLayout>
 

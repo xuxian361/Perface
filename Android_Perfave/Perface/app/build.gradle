@@ -26,4 +26,9 @@ dependencies {
     compile files('libs/android-query-full.0.26.8.jar')
     compile project(':libraries:SlidingMenu')
     compile project(':libraries:HorizontalVariableListView')
+    //    compile files('libs/recyclerview-animators-1.2.0.jar')
+    compile 'com.android.support:appcompat-v7:22.2.0'
+    compile 'com.android.support:recyclerview-v7:22.2.0'
+    compile files('libs/recyclerview-animators-1.2.0.jar')
+    compile 'com.squareup.picasso:picasso:2.5.2'
 }

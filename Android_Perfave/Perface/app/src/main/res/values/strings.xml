@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">完美写真</string>
+    <string name="app_name">青春纪念册</string>
     <string name="action_settings">Settings</string>
     <string name="register">注册</string>
     <string name="login">登陆</string>
@@ -12,7 +12,7 @@
     <string name="confirm_password">确认密码</string>
     <string name="nickname">昵称</string>
     <string name="home">首页</string>
-    <string name="my_photo">我的写真</string>
+    <string name="my_photo">我的纪念册</string>
     <string name="my_bookmark">我的收藏</string>
     <string name="people_can_see">别人可见</string>
     <string name="people_cannot_see">别人不可见</string>
@@ -39,5 +39,7 @@
     <string name="more">更多</string>
     <string name="album">相簿</string>
     <string name="my_info">我的信息</string>
+    <string name="or_upload_to_others">或者上传至之前图册</string>
+    <string name="album_name">图册名称</string>
 
 </resources>

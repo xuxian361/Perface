@@ -32,12 +32,27 @@
             android:layout_alignParentBottom="false"
             android:layout_toLeftOf="@+id/btn_update_name"
             android:textColor="@color/black2"
-            android:hint="图册名称" />
+            android:hint="@string/album_name" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/or_upload_to_others"
+            android:id="@+id/textView"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="12dp" />
 
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:id="@+id/spinner"
+            android:id="@+id/spinner_albums"
+            android:layout_marginTop="6dp"
+            style="@style/Widget.AppCompat.DropDownItem.Spinner" />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/spinner_permission"
             android:layout_marginTop="6dp"
             style="@style/Widget.AppCompat.DropDownItem.Spinner" />
 

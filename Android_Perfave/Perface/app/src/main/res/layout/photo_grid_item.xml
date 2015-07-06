@@ -8,8 +8,11 @@
         android:id="@+id/img_item"
         android:layout_width="match_parent"
         android:layout_height="140dp"
-        android:layout_centerHorizontal="true"
-        android:scaleType="center" />
+        android:scaleType="center"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_centerInParent="true" />
 
     <TextView
         android:id="@+id/txt_desc"
@@ -17,8 +20,8 @@
         android:layout_height="36dp"
         android:layout_alignParentBottom="false"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:background="@drawable/shape_corner_green"
         android:text="女王装"
         android:textColor="@color/white_bg2"

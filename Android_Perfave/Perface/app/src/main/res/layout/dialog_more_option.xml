@@ -58,7 +58,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <perface.sundy.com.perface.utils.custom_view.FixedGridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                <perface.sundy.com.perface.utils.custom_view.FixedGridLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
                     android:id="@+id/fixedv_style"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
